@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>PorkIPTV — The First Provider With Backup Solution</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PorkIPTV: Stable IPTV with backup service, 24/7 real customer care, free VPN, Android APK, and instant activation. 25,000+ Live TV & 170,000+ VOD. Get your 24H Trial." />
+  <link rel="canonical" href="https://porkiptv.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="PorkIPTV — The First Provider With Backup Solution" />
+  <meta property="og:description" content="We combine multiple top providers to guarantee access 99% of the time. Free VPN, 24/7 support, Android APK, instant activation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://porkiptv.com/" />
+  <meta property="og:image" content="https://porkiptv.com/wp-content/uploads/2023/08/sw.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PorkIPTV — The First Provider With Backup Solution" />
+  <meta name="twitter:description" content="Stable IPTV with backup line, free VPN, 24/7 care, and instant activation." />
+  <meta name="twitter:image" content="https://porkiptv.com/wp-content/uploads/2023/08/sw.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Dark theme with red/pink accent to match logo */
+      --bg:#0b0b10;
+      --bg-2:#12121a;
+      --text:#e5e7eb;
+      --muted:#a1a1aa;
+      --card:#141421;
+      --accent:#ff3b5c;     /* primary */
+      --accent-2:#ff6a88;   /* gradient partner */
+      --accent-700:#e11d48; /* hover */
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --radius:16px;
+      --shadow:0 16px 40px rgba(0,0,0,.35);
+      --border:1px solid rgba(255,255,255,.08);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      background:radial-gradient(1200px 800px at 80% -10%, rgba(255,58,92,.08), transparent),
+                 radial-gradient(1000px 600px at -10% 20%, rgba(255,106,136,.06), transparent),
+                 var(--bg);
+      color:var(--text);
+      font-family:'Inter',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.75;
+    }
+    a{color:#fff;text-decoration:none}
+    img{max-width:100%;height:auto}
+
+    /* Header / Hero */
+    header{
+      background:linear-gradient(135deg, rgba(255,59,92,.18), rgba(255,106,136,.12));
+      border-bottom:var(--border);
+      padding:28px 16px 64px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .brand{
+      display:flex; align-items:center; justify-content:center; gap:12px;
+    }
+    .brand img{height:44px; width:auto; border-radius:10px; background:#fff; padding:4px}
+    header h1{margin:10px 0 6px; font-size:32px; font-weight:800; letter-spacing:.2px}
+    header p{margin:0; color:var(--muted)}
+    .nav{
+      margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+    }
+    .chip{
+      padding:8px 14px; border-radius:999px; background:rgba(255,255,255,.06);
+      border:var(--border); color:#fff; font-weight:600; font-size:14px;
+    }
+    .chip:hover{background:rgba(255,255,255,.12)}
+
+    /* Containers / Cards */
+    .container{max-width:1180px; margin:-40px auto 64px; padding:0 16px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), transparent), var(--card);
+      border:var(--border); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:26px; margin-bottom:20px;
+      backdrop-filter: blur(6px);
+    }
+    .section-title{
+      margin:0 0 8px; font-size:22px; font-weight:800;
+      background:linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .lead{margin:0; color:var(--muted)}
+
+    /* Grids */
+    .grid-2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px}
+    .grid-3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px}
+    .grid-4{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px}
+    @media (max-width:980px){ .grid-4{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:680px){ .grid-2,.grid-3,.grid-4{grid-template-columns:1fr} header h1{font-size:26px} }
+
+    /* Feature Items */
+    .feature{
+      border:var(--border); border-radius:14px; padding:18px; background:rgba(255,255,255,.02);
+    }
+    .feature h3{margin:0 0 6px; font-size:18px}
+    .feature p{margin:0; color:var(--muted)}
+
+    /* Pricing */
+    .plans{margin-top:14px}
+    .plan{
+      border:var(--border); border-radius:14px; padding:18px; background:rgba(255,255,255,.03);
+      display:flex; flex-direction:column; gap:10px; position:relative;
+    }
+    .plan.popular{box-shadow:0 0 0 2px rgba(255,59,92,.35), 0 14px 32px rgba(255,59,92,.18)}
+    .badge{
+      position:absolute; top:12px; right:12px; background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#111; font-weight:800; padding:6px 10px; border-radius:999px; font-size:12px;
+    }
+    .plan h4{margin:0; font-size:18px}
+    .price{font-size:26px; font-weight:800; color:#fff}
+    .bullets{padding:0; margin:0; list-style:none; display:flex; flex-direction:column; gap:6px}
+    .bullets li{position:relative; padding-left:22px; color:var(--muted)}
+    .bullets li::before{content:"✓"; position:absolute; left:0; top:0; color:var(--ok); font-weight:900}
+
+    /* Buttons */
+    .cta{display:flex; flex-wrap:wrap; gap:10px}
+    .btn{
+      display:inline-block; padding:12px 18px; border-radius:12px; font-weight:800; letter-spacing:.2px;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#0b0b10;
+      box-shadow:0 12px 26px rgba(255,59,92,.28); border:none;
+      transition:transform .18s ease, filter .18s ease;
+    }
+    .btn:hover{transform:translateY(-2px); filter:brightness(1.05)}
+    .btn.ghost{background:transparent; color:#fff; border:1px solid rgba(255,255,255,.2); box-shadow:none}
+
+    /* Notes */
+    .note{font-size:13px; color:var(--muted)}
+    .disclaimer{
+      background:rgba(255,255,255,.04); border:var(--border); color:#e5e7eb;
+      padding:14px; border-radius:12px; font-size:13px;
+    }
+
+    /* Footer */
+    footer{padding:36px 12px; text-align:center; color:var(--muted); border-top:var(--border)}
+  </style>
+
+  <!-- Structured Data (Organization + OfferCatalog) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Pork IPTV",
+    "url":"https://porkiptv.com/",
+    "logo":"https://porkiptv.com/wp-content/uploads/2023/08/sw.png",
+    "sameAs":["https://t.me/PorkIPTV_Support"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"OfferCatalog",
+    "name":"PorkIPTV Plans",
+    "itemListElement":[
+      {"@type":"Offer","name":"All Devices Supported — 1 Month","price":"9.99","priceCurrency":"EUR","availability":"https://schema.org/InStock"},
+      {"@type":"Offer","name":"All Devices + Backup Line — 6 Months","price":"39.99","priceCurrency":"EUR","availability":"https://schema.org/InStock"},
+      {"@type":"Offer","name":"All Devices + Backup Line — 1 Year (Popular)","price":"54.99","priceCurrency":"EUR","availability":"https://schema.org/InStock"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div class="brand" aria-label="PorkIPTV logo">
+      <img src="https://porkiptv.com/wp-content/uploads/2023/08/sw.png" alt="PorkIPTV logo" loading="lazy" decoding="async">
+      <h1>Pork IPTV</h1>
+    </div>
+    <p>PorkIPTV: The First provider With Backup Solution.</p>
+    <div class="nav" aria-label="Primary">
+      <a class="chip" href="#why">Why PorkIPTV</a>
+      <a class="chip" href="#features">Features</a>
+      <a class="chip" href="#trial">Trial</a>
+      <a class="chip" href="#plans">Plans</a>
+      <a class="chip" href="#how">How To Get</a>
+      <a class="chip" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- WHY -->
+    <section id="why" class="card">
+      <h2 class="section-title">Why?</h2>
+      <p class="lead">
+        Because we are not a simple provider. We work with Top 5 Source providers to make clients 100% satisfied by delivering different alternative services.
+      </p>
+      <div class="grid-3" style="margin-top:16px">
+        <div class="feature">
+          <h3>Real Customer Care</h3>
+          <p>You get 24/7 support from our dedicated team to solve any issue immediately.</p>
+        </div>
+        <div class="feature">
+          <h3>Best Package</h3>
+          <p>You get 1 Pro service + 1 Basic backup service to guarantee access 99% of the time. In the electronic world, 100% uptime for a single service is impossible—so we provide a free separate backup line.</p>
+        </div>
+        <div class="feature">
+          <h3>Stable Services</h3>
+          <p>We’re the first provider with a network team checking client–server routes to find packet loss and re-route to fix issues.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE BENEFITS -->
+    <section id="features" class="card">
+      <h2 class="section-title">Core Benefits</h2>
+      <div class="grid-2">
+        <div class="feature">
+          <h3>Free VPN</h3>
+          <p>We are the first provider with this option. With our free VPN, you will be 100% safe.</p>
+        </div>
+        <div class="feature">
+          <h3>Direct TV</h3>
+          <p>Access to +25,000 Live Channels & +170,000 Movies/Series using the Internet and a smart device.</p>
+        </div>
+        <div class="feature">
+          <h3>Exclusive Android APK</h3>
+          <p>We offer a dedicated Android IPTV app to provide you with more valuable features.</p>
+        </div>
+        <div class="feature">
+          <h3>Instant IPTV</h3>
+          <p>Automated distribution system—your subscription info is sent immediately after purchase.</p>
+        </div>
+        <div class="feature">
+          <h3>Auto Updates</h3>
+          <p>Services, channels, and panel are automatically updated once a week.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section class="card">
+      <h2 class="section-title">WHO WE ARE? Get IPTV Service.</h2>
+      <ul class="bullets">
+        <li>You get over 35,000 PPV & Premium Channels instantly.</li>
+        <li>You get over 170,000 Movies & Series.</li>
+        <li>Our IPTV service is up 99.99% of the time.</li>
+        <li>100% satisfaction guarantee.</li>
+        <li>Best market price—guaranteed.</li>
+        <li>Best 24/7 customer service.</li>
+      </ul>
+    </section>
+
+    <!-- TRIAL -->
+    <section id="trial" class="card">
+      <h2 class="section-title">Trial Access — All Channels</h2>
+      <p class="lead">24 H — €Free/24h</p>
+      <p>All the TV you love. Watch your favorite TV channels and full seasons of exclusive series, hit movies, sports events, kids shows, and much more.</p>
+      <div class="cta" style="margin-top:12px">
+        <a class="btn" href="#contact">Get 24H Trial</a>
+        <a class="btn ghost" href="#plans">See Plans</a>
+      </div>
+    </section>
+
+    <!-- HOW TO GET -->
+    <section id="how" class="card">
+      <h2 class="section-title">How To Get?</h2>
+      <div class="grid-3">
+        <div class="feature"><h3>1. Place your order</h3><p>Select a plan that fits your needs.</p></div>
+        <div class="feature"><h3>2. Get your account</h3><p>Receive your credentials instantly via our automated system.</p></div>
+        <div class="feature"><h3>3. Enjoy IPTV</h3><p>Set up on any device and start watching right away.</p></div>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section id="plans" class="card">
+      <h2 class="section-title">Ultra 8K Plans</h2>
+      <p class="note">The prices below are one-time payments. Don’t forget to renew before the expiry date.</p>
+
+      <div class="grid-3 plans" style="margin-top:14px">
+
+        <article class="plan" aria-label="All Devices Supported — 1 Month">
+          <h4>All Devices Supported</h4>
+          <div class="price">€9.99 / 1m</div>
+          <ul class="bullets">
+            <li>+ With Free VPN!</li>
+            <li>1 Connection</li>
+            <li>+ 32,000 Channels</li>
+            <li>Biggest VOD Archive HD/4K</li>
+            <li>Catchup = 3–4 Days</li>
+            <li>EPG Guide</li>
+            <li>PPV & Premium</li>
+            <li>SD • HD • FHD • HEVC • 4K</li>
+            <li>Anti-Freeze™ 7.0 — No Buffering</li>
+            <li>99.9% Uptime</li>
+            <li>Free Weekly Updates</li>
+            <li>Secure Pay, Instant Activation</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="#contact">Buy Now</a>
+            <a class="btn ghost" href="#trial">Get Trial</a>
+          </div>
+        </article>
+
+        <article class="plan" aria-label="All Devices + Backup Line — 6 Months">
+          <h4>All Devices Supported <span style="opacity:.7">+ Backup Line!</span></h4>
+          <div class="price">€39.99 / 6m</div>
+          <ul class="bullets">
+            <li>+ With Free VPN!</li>
+            <li>1 Connection</li>
+            <li>+ 32,000 Channels</li>
+            <li>Biggest VOD Archive HD/4K</li>
+            <li>Catchup = 3–4 Days</li>
+            <li>EPG Guide</li>
+            <li>PPV & Premium</li>
+            <li>SD • HD • FHD • HEVC • 4K</li>
+            <li>Anti-Freeze™ 7.0 — No Buffering</li>
+            <li>99.9% Uptime</li>
+            <li>Free Weekly Updates</li>
+            <li>Secure Pay, Instant Activation</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="#contact">Buy Now</a>
+            <a class="btn ghost" href="#trial">Get Trial</a>
+          </div>
+        </article>
+
+        <article class="plan popular" aria-label="All Devices + Backup Line — 1 Year">
+          <span class="badge">Popular</span>
+          <h4>All Devices Supported <span style="opacity:.7">+ Backup Line!</span></h4>
+          <div class="price">€54.99 / 1y</div>
+          <ul class="bullets">
+            <li>+ With Free VPN!</li>
+            <li>1 Connection</li>
+            <li>+ 32,000 Channels</li>
+            <li>Biggest VOD Archive HD/4K</li>
+            <li>Catchup = 3–4 Days</li>
+            <li>EPG Guide</li>
+            <li>PPV & Premium</li>
+            <li>SD • HD • FHD • HEVC • 4K</li>
+            <li>Anti-Freeze™ 7.0 — No Buffering</li>
+            <li>99.9% Uptime</li>
+            <li>Free Weekly Updates</li>
+            <li>Secure Pay, Instant Activation</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="#contact">Buy Now</a>
+            <a class="btn ghost" href="#trial">Get Trial</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>Please give us a call, drop us an email or contact us on Telegram — we’ll get back to you.</p>
+
+      <div class="grid-3" style="margin-top:12px">
+        <div class="feature">
+          <h3>Telegram</h3>
+          <p><a href="https://t.me/PorkIPTV_Support" target="_blank" rel="noopener">@PorkIPTV_Support</a></p>
+        </div>
+        <div class="feature">
+          <h3>Email</h3>
+          <p><a href="mailto:info@PorkIPTV.Com">info@PorkIPTV.Com</a></p>
+        </div>
+        <div class="feature">
+          <h3>Phone / WhatsApp</h3>
+          <p><a href="https://wa.me/447441427733" target="_blank" rel="noopener">+44 7441 427733</a></p>
+        </div>
+      </div>
+
+      <div class="disclaimer" style="margin-top:16px">
+        Only the WhatsApp number and email on this page are official. Any other contacts claiming to represent this website are not valid. Please use only the information provided here to ensure authenticity.
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Pork IPTV — All Rights Reserved
+  </footer>
+
+</body>
+</html>
